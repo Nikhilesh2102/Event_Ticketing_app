@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="login-background">
+    
+    <form method="POST" class="login-form">
+        {% csrf_token %} 
+        <h1>Register</h1>
+        <input type="text" placeholder="Enter username" name="username" style="width: 70%; height: 2.5em;">
+        <br><br>
+        <input type="password" placeholder="Enter password" name="password1" style="width: 70%; height: 2.5em;">
+        <br><br>
+        <input type="password" placeholder="confirm password" name="password2" style="width: 70%; height: 2.5em;">
+        <br><br>
+        <input type="submit" value ="Register" id="login-btn" style="width: 70%; height: 3em; background-color: black; color: white;"/> <br><br>
+        <ul style="color: white;">
+            <li>Password should have more than 9 characters.</li>
+            <li>Include sybmols and numbers also.</li>
+        </ul>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoginUser</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="login-background">
+    <form method="POST" class="login-form">
+        <div style=" margin-top: 15px; 
+          margin-left: 20px;
+        text-align: center;;
+        color: white;
+        height: 30px;
+        width: 90%;">
+        {% for msg in messages %}
+       {{msg}}
+        {% endfor %}</div>
+        <h1>Login </h1>
+        {% csrf_token %}
+        <input type="text" name="username" id="username" placeholder="Enter Username" class="login-input"><br> <br>
+        <input type="password" name="password" id="password" placeholder="Enter password" class="login-input"><br> <br>
+        <button type="submit" id="login-btn" class="login-btn">Login</button> <br> <br>
+        <p style="color: white;">New User?</p><a id="register" href="register"><p>Create Account</p> </a>
+    </form>
+    </div>
+</body>
+</html>

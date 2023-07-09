@@ -1,0 +1,117 @@
+body{   
+    margin:0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.login-background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 759px;
+    width: 100%;
+    background-image: url(./login\ background\ img.jpg);
+}
+.login-form{
+    width: 30%;
+    height: fit-content;
+    text-align: center;
+    background-color:rgba(174, 174, 174, 0.4);
+    border-radius: 15px;
+}
+#register{
+    font-size: larger;
+    text-decoration: none;
+    color: white;
+}
+.login-input{
+    width: 70%;
+    height: 2.5em;
+}
+.login-btn{
+    background-color: black ;
+    width: 70%;
+    height: 3.5em;
+    color: white;
+    font-weight: 700;
+    font-size:small; 
+    cursor: pointer;
+}
+.login-btn:hover{
+    color: black;
+    background-color: rgb(37, 29, 29,0.8);
+}
+
+.Buy{
+    display: none;
+}
+.list{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    text-decoration: none;
+}
+.list-item{
+    text-align: center;
+    background-color: rgba(49, 46, 46, 0.3);
+    margin-right: 2em ;
+    width: auto;
+    height: 100%;
+    font-weight: 400;
+    font-size: larger;
+    border-radius: 5%;
+}
+.home{
+    background-image: url(./home\ background\ img.jpg);
+    margin-top: 0;
+    height: 100%;
+}
+.navbar{
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: aliceblue;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: center;
+    border: 1px solid black;
+  }
+.dropdown-content a:hover{
+       background-color: rgba(174, 174, 174, 0.984);
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.body{
+    margin-left: 10%;
+    color: whitesmoke;
+}
+.organise{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 759px;
+    width: 100%;
+    background-image: url(./home\ background\ img.jpg);
+}
+#organise-btn{
+    background-color: black;
+    color: white;
+    height: 45px;
+    width: 90%;
+    margin-bottom: 8px;
+}
+.organise-input{
+    width: 90%;
+    height: 30px;
+    text-align: center;
+}
+
+
+
+
+

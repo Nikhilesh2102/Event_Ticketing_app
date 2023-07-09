@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <div class="organise">
+  <form method="POST" class="login-form">
+    {% csrf_token %}
+    <h1 style="font-family: monospace; "> Organise Your Event</h1> <br>
+    <input type="text" name="EventName" id="EventName" placeholder="Event Name" class="organise-input"><br><br>
+    <input type="text" name="EventVenue" id="EventVenue" placeholder="Event Venue" class="organise-input"><br><br>
+    <input type="text" name="EventDescription" id="EventDescription" placeholder="Event Description" class="organise-input"><br><br>
+    <input type="date" name="EventDate" id="EventDate" placeholder="EventDate" class="organise-input"><br><br>
+    <input type="time" name="EventTime" id="EventTime" placeholder="EventTime" class="organise-input"><br><br>
+    <input type="text" name="EventAvailableTickets" id="EventAvailableTickets" placeholder="Event Available Tickets" class="organise-input"><br><br>
+    <input type="submit" value="Organise" id="organise-btn">
+  </form>
+</div>
+</body>
+</html>
