@@ -41,8 +41,9 @@ body{
 }
 
 .Buy{
-    display: none;
+    display: block;
 }
+
 .list{
     list-style-type: none;
     display: flex;
@@ -87,7 +88,7 @@ body{
     display: block;
 }
 .body{
-    margin-left: 10%;
+    margin-left: 5%;
     color: whitesmoke;
 }
 .organise{

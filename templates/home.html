@@ -31,42 +31,26 @@
     <div class="body">
     <h1 >Today's Events:</h1>
     <br>
-    {% csrf_token %}
     {% if Events %}
     <ul  class="list">
         {% for Event in Events %}
-           <div style="width: 33%; margin-bottom: 2em;"><li class="list-item" style="width: auto;">{{Event.EventName}} <br>
+        <div style="width: 33%; margin-bottom: 2em;"><li class="list-item" style="width: auto;">
+        <form action=" {% url 'tickets' Event.id %}">
+            {% csrf_token %}
+            {{Event.EventName}} <br>
             Event Venue : {{Event.EventVenue}} <br>
                {{Event.EventDescription}} <br> <br>
             Time : {{Event.EventTime}} <br> <br>
             Available Tickets : {{Event.EventAvailableTickets}} <br><br>
-            <input type="button" class="BuyButton" value="Buy Tickets"  data-EventName ="{{Event.EventName}}" style=" width: 100%; height: 40px; background-color: black; color: white; cursor: pointer;">
-            <div class="Buy" id="form-{{Event.EventName}}" >
-                <h1>Buy Tickets for {{Event.EventName}}</h1>
-            <form method="POST" action="{% url 'UpdatedEvent' Event.id %}" >
-                {% csrf_token %}
-                <input type="number" name="TicketsNeeded" id="TicketsNeeded" placeholder="Eneter number of tickets needed">
-                <input type="submit" value="Buy Tickets" id="BuyTickets">
-            </form> 
-            </div>   
+            <input type="submit" class="BuyButton" value="Buy Tickets"  data-EventName ="{{Event.EventName}}" style=" width: 100%; height: 40px; background-color: black; color: white; cursor: pointer;">
+         </form> 
         </li> </div>
-        {% endfor %}
-            
+        {% endfor %}           
     </ul>
     {% else  %}
     <p>No Events Today</p>
     {% endif %}
 </div>
-    <script>
-        const BuyButtons = document.querySelectorAll('.BuyButton');
-        BuyButtons.forEach(btn =>{
-            btn.addEventListener('click', ()=>{
-                const EventName = btn.getAttribute('data-EventName') 
-                const form = document.querySelector(`#form-${EventName}`);
-                form.style.display = 'block'
-            })
-        })
-    </script>
     
 </body>
 </html>
