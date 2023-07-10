@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="https://kit.fontawesome.com/23fdf0a18e.js" crossorigin="anonymous"></script>
+</head>
+<body   class="tickets" style="    display: flex;
+height: 100vh;
+justify-content: center;
+align-items: center;">
+    <div class="Buy" ><i class="fa-regular fa-camera-movie"></i> 
+    <h1>Buy Tickets for {{Event.EventName}}</h1>
+    <form method="POST" action="{% url 'UpdatedEvent' Event.id %}" >
+        {% csrf_token %}
+        <input type="number" name="TicketsNeeded" id="TicketsNeeded" placeholder="Eneter number of tickets needed">
+        <input type="submit" value="Buy Tickets" id="BuyTickets">
+    </form> 
+    </div> 
+</body>
+</html>
