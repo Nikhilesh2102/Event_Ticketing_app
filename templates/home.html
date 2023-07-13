@@ -8,6 +8,11 @@
     <script src="https://kit.fontawesome.com/23fdf0a18e.js" crossorigin="anonymous"></script>
 </head>
 <body class="home">
+    <div style="color: white; background-color: black; display: flex; justify-content: center; font-size: xx-large;">
+    {% for msg in messages %}
+       {{msg}}
+    {% endfor %}
+</div>
     <div class="navbar">
         <div class="dropdown" style=" 
         padding: 12px 16px;
@@ -36,7 +41,7 @@
         {% for Event in Events %}
         <div style="width: 33%; margin-bottom: 2em;"><li class="list-item" style="width: auto;">
         <form action=" {% url 'tickets' Event.id %}">
-            {% csrf_token %}
+            
             {{Event.EventName}} <br>
             Event Venue : {{Event.EventVenue}} <br>
                {{Event.EventDescription}} <br> <br>
@@ -51,6 +56,8 @@
     <p>No Events Today</p>
     {% endif %}
 </div>
-    
+    <footer style="background-color: rgb(245, 245, 245,0.2); color: black; height: 50px; display: flex; justify-content: center; align-items: center;">
+        <a href="https://www.instagram.com/_the.nikhil.b_/?hl=en" style="text-decoration: none; display: flex; align-items: center; color: black; " target="_blank"> Designed by :<i class="fa-brands fa-instagram fa-3x"></i></a>
+    </footer>
 </body>
 </html>

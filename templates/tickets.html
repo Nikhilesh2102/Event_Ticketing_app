@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../static/style.css">
-    <script src="https://kit.fontawesome.com/23fdf0a18e.js" crossorigin="anonymous"></script>
 </head>
-<body   class="tickets" style="    display: flex;
-height: 100vh;
-justify-content: center;
-align-items: center;">
-    <div class="Buy" ><i class="fa-regular fa-camera-movie"></i> 
+<body style="background-color: black; color: white; display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <div style="    width: 30%;
+    height: 45%;
+    text-align: center;
+    background-color:rgba(174, 174, 174, 0.4);
+    border-radius: 15px; display: flex; justify-content: center; align-items: center;">
     <h1>Buy Tickets for {{Event.EventName}}</h1>
     <form method="POST" action="{% url 'UpdatedEvent' Event.id %}" >
         {% csrf_token %}
-        <input type="number" name="TicketsNeeded" id="TicketsNeeded" placeholder="Eneter number of tickets needed">
-        <input type="submit" value="Buy Tickets" id="BuyTickets">
+        <input type="number" name="TicketsNeeded" id="TicketsNeeded" placeholder="Eneter number of tickets needed" style="margin-bottom: 20px; height: 25px; width: 13rem;">
+        <input type="submit" value="Buy Tickets" id="BuyTickets" style="width: 14rem; height: 30px; background-color: black; color: white;">
     </form> 
-    </div> 
+</div>
 </body>
 </html>
